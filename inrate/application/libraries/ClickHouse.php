@@ -6,10 +6,10 @@
 
         public function __construct(){
             $config = [
-                'host' => 'dev-db.u.1elf.net',
-                'port' => '8123',
-                'username' => 'inrate_user_2',
-				'password' => 'GQa0qu6qyoM7lu3Aw3v1',
+                'host' => $host,
+                'port' => $port,
+                'username' => $user,
+				'password' => $password,
             ];
             
             $db = new ClickHouseDB\Client($config);
