@@ -1457,7 +1457,7 @@ class Tvprogramun3tvvir extends JA_Controller {
 		}else{
 			
 			$data['monthdt'] = $this->tvprogramun_model->get_sel_week_month($first_day,$this_day);
-			
+			//print_r($data['monthdt']);DIE;
 			
 			$bulan['01'] = 'January';
 			$bulan['02'] = 'February';
@@ -1572,7 +1572,7 @@ class Tvprogramun3tvvir extends JA_Controller {
 						$wkwk['WEEK'] = ($wkwk['WEEK']) - 1;
 						//$query_qr = $query_qr."A".$ri.".`VIEWERS` AS WE".$ri.",";
 						$query_qr = $query_qr." IF(A".$ri.".`VIEWERS` is null,0,A".$ri.".`VIEWERS`) AS WE".$ri.",A".$ri.".`CHANNEL` AS CHANNEL".$ri.", A".$ri.".`PROGRAM` AS PROGRAM".$ri.",";
-						$week_in = $week_in."'".(($wkwk['WEEK']-$w_week))."',";
+						$week_in = $week_in."'".(($wkwk['WEEK']))."',";
 						
 						IF($ri == 1){
 
@@ -1679,7 +1679,7 @@ class Tvprogramun3tvvir extends JA_Controller {
 
 					//$query_qr = $query_qr."A".$ri.".`VIEWERS` AS WE".$ri.",";
 					$query_qr = $query_qr." IF(A".$ri.".`VIEWERS` is null,0,A".$ri.".`VIEWERS`) AS WE".$ri.",A".$ri.".`CHANNEL` AS CHANNEL".$ri.", A".$ri.".`PROGRAM` AS PROGRAM".$ri.",";
-					$week_in = $week_in."'".(($wkwk['WEEK']-$w_week))."',";
+					$week_in = $week_in."'".(($wkwk['WEEK']))."',";
 					
 					IF($ri == 1){
 					$join_left = $join_left." 
